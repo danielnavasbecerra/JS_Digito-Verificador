@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validador de Números</title>
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <section>
+        <div class="form-box ">
+            <div id="crear" class="form-value">
+                <form action="">
+                    <h2>Generar Dígito Verificador</h2>
+                    <div class="inputbox">
+                        <i class="ri-sort-number-asc"></i>
+                        <input type="number" required />
+                        <label for="">Ingrese un número</label>
+                    </div>
+                    <button>Generar</button>
+                    <div class="register">
+                        <p>Don't have a account <a href="#">Register</a></p>
+                    </div>
+                </form>
+            </div>
+            <div id="crear" class="form-value hide">
+                <form action="">
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <i class="ri-sort-number-asc"></i>
+                        <input type="number" required />
+                        <label for="">Numbers</label>
+                    </div>
+                    <button>Log in</button>
+                    <div class="register">
+                        <p>Don't have a account <a href="#">Register</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <h1>Validación de Números con Dígito Verificador</h1>
+        <div class="options">
+            <button onclick="generateVerifier()">Generar Dígito Verificador</button>
+            <button onclick="verifyExistence()">
+                Verificar Existencia en la Lista
+            </button>
+            <button onclick="showList()">
+                Mostrar Listado de Números y Dígitos Verificadores
+            </button>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
