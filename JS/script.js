@@ -1,3 +1,27 @@
+// Funcion para cambiar entre paginas
+function CambiarPagina() {
+    let container = document.getElementsByClassName("form-generar")[0];
+
+    if (container.style.visibility == "hidden") {
+        container.style.visibility = "visible";
+    } else {
+        container.style.visibility = "hidden";
+    }
+}
+
+// Utils
+function Pagina(id) {
+
+}
+
+
+
+
+
+
+
+
+
 // Función para generar el dígito verificador
 function generateVerifier() {
     let inputNumber = prompt("Ingrese el número para generar el dígito verificador:");
@@ -5,7 +29,7 @@ function generateVerifier() {
 
     let verifier = calculateVerifier(inputNumber);
     let formattedNumber = inputNumber + "-" + verifier;
-    
+
     // Mostrar el número con su dígito verificador generado
     document.getElementById("output").innerText = "Número con Dígito Verificador: " + formattedNumber;
 }

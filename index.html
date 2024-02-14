@@ -11,8 +11,9 @@
 
 <body>
     <section>
-        <div class="form-box ">
-            <div id="crear" class="form-value">
+        <div class="form-box">
+
+            <div id="generar" class="form-generar">
                 <form action="">
                     <h2>Generar Dígito Verificador</h2>
                     <div class="inputbox">
@@ -22,24 +23,42 @@
                     </div>
                     <button>Generar</button>
                     <div class="register">
-                        <p>Don't have a account <a href="#">Register</a></p>
+                        <p> <a href="#" onclick="CambiarPagina()">Verificar</a> Existencia en la Lista</p>
+                        <p> <a href="#" onclick="CambiarPagina()">Mostrar</a> Listado de Números y Dígitos Verificadores</p>
                     </div>
                 </form>
             </div>
-            <div id="crear" class="form-value hide">
+
+            <div id="verificar" class="form-verificar hide">
                 <form action="">
                     <h2>Login</h2>
                     <div class="inputbox">
                         <i class="ri-sort-number-asc"></i>
                         <input type="number" required />
-                        <label for="">Numbers</label>
+                        <label for="">Ingrese un</label>
                     </div>
-                    <button>Log in</button>
+                    <button>Buscar</button>
                     <div class="register">
                         <p>Don't have a account <a href="#">Register</a></p>
                     </div>
                 </form>
             </div>
+
+            <div id="mostrar" class="form-mostrar hide">
+                <form action="">
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <i class="ri-sort-number-asc"></i>
+                        <input type="number" required />
+                        <label for="">Ingrese un</label>
+                    </div>
+                    <button>Buscar</button>
+                    <div class="register">
+                        <p>Don't have a account <a href="#">Register</a></p>
+                    </div>
+                </form>
+            </div>
+
         </div>
     </section>
 
