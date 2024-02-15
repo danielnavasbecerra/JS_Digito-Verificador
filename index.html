@@ -11,27 +11,52 @@
 
 <body>
 
-    <header>
+    <header id="header">
         <h1>Dígito Verificador</h1>
     </header>
 
-    <section class="form-box">
-        <div id="generar" class="form-generar">
+    <section id="generar">
+        <div class="form-box">
             <form action="">
 
-                <header>
+                <header class="heading">
                     <h2>Generar Dígito Verificador</h2>
                 </header>
 
                 <main class="inputbox">
                     <i class="ri-sort-number-asc"></i>
-                    <input type="number" required />
-                    <label for="">Ingrese un número</label>
-                    <button>Generar</button>
+                    <input type="number" id="num-dig" required />
+                    <label for="num-dig">Ingrese un número</label>
                 </main>
+                <button id="button-generate">Generar</button>
 
                 <footer class="register">
-                    <p> <a href="#" onclick="CambiarPagina()">Verificar</a> Existencia en la Lista</p>
+                    <p> <a id="link" href="#" onclick="changePage()">Verificar</a> Existencia en la Lista</p>
+                    <p> <a id="link" href="#" onclick="CambiarPagina()">Mostrar</a> Listado de Números y Dígitos Verificadores</p>
+                </footer>
+
+            </form>
+        </div>
+    </section>
+
+
+    <section id="verificar">
+        <div class="form-box">
+            <form action="">
+
+                <header class="heading">
+                    <h2>Verificar Existencia en la Lista</h2>
+                </header>
+
+                <main class="inputbox">
+                    <i class="ri-sort-number-asc"></i>
+                    <input type="number" id="num" required />
+                    <label for="num">Número con su Digito Verificador</label>
+                </main>
+                <button id="button-verificar">Verificar</button>
+
+                <footer class="register">
+                    <p> <a href="#" onclick="CambiarPagina()">Generar</a> Dígito Verificador</p>
                     <p> <a href="#" onclick="CambiarPagina()">Mostrar</a> Listado de Números y Dígitos Verificadores</p>
                 </footer>
 
@@ -40,43 +65,30 @@
     </section>
 
 
+    <section id="mostrar">
         <div class="form-box">
-            <div id="verificar" class="form-verificar hide">
-                <form action="">
-                    <h2>Login</h2>
-                    <div class="inputbox">
-                        <i class="ri-sort-number-asc"></i>
-                        <input type="number" required />
-                        <label for="">Ingrese un</label>
-                    </div>
-                    <button>Buscar</button>
-                    <div class="register">
-                        <p>Don't have a account <a href="#">Register</a></p>
-                    </div>
-                </form>
-            </div>
+            <form action="">
+
+                <header class="heading">
+                    <h2>Mostrar Listado de Números</h2>
+                </header>
+
+                <main class="inputbox">
+                    
+                </main>
+                <button id="button-mostrar">Mostrar/Ocultar</button>
+
+                <footer class="register">
+                    <p> <a href="">Generar</a> Dígito Verificador</p>
+                    <p> <a href="">Verificar</a> Existencia en la Lista</p>
+                </footer>
+
+            </form>
         </div>
+    </section>
 
 
-        <div class="form-box">
-            <div id="mostrar" class="form-mostrar hide">
-                <form action="">
-                    <h2>Login</h2>
-                    <div class="inputbox">
-                        <i class="ri-sort-number-asc"></i>
-                        <input type="number" required />
-                        <label for="">Ingrese un</label>
-                    </div>
-                    <button>Buscar</button>
-                    <div class="register">
-                        <p>Don't have a account <a href="#">Register</a></p>
-                    </div>
-                </form>
-            </div>
-        </div>
-        
 
-    
 
     <div class="container">
         <h1>Validación de Números con Dígito Verificador</h1>

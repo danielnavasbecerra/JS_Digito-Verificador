@@ -1,64 +1,41 @@
+let sectionGenerar
+let sectionVerificar
+let sectionMostrar
+
 // Funcion para Iniciar Pagina
-function startGame() {
-    let sectionSelectAttack = document.getElementById('select-attack')
-    sectionSelectAttack.style.display = 'none'
+function startPage() {
+    sectionVerificar = document.getElementById('verificar')
+    sectionVerificar.style.display = 'none'
 
-    let sectionRestartGame = document.getElementById('restart')
-    sectionRestartGame.style.display = 'none'
+    sectionMostrar = document.getElementById('mostrar')
+    sectionMostrar.style.display = 'none'
 
-    let buttonCharacterPlayer = document.getElementById('button-character')
-    buttonCharacterPlayer.addEventListener('click', chooseCharacterPlayer)
+    let buttonGenerateDigit = document.getElementById('button-generate')
+    buttonGenerateDigit.addEventListener('click', generateDigit)
 
-    let buttonFire = document.getElementById('button-fire')
-    buttonFire.addEventListener('click', attackFire)
-    let buttonWater = document.getElementById('button-water')
-    buttonWater.addEventListener('click', attackWater)
-    let buttonAir = document.getElementById('button-air')
-    buttonAir.addEventListener('click', attackAir)
-    let buttonEarth = document.getElementById('button-earth')
-    buttonEarth.addEventListener('click', attackEarth)
+    let buttonVerifyExistence = document.getElementById('button-verificar')
+    buttonVerifyExistence.addEventListener('click', verifyExistence)
 
-    let buttonRestart = document.getElementById('button-restart')
-    buttonRestart.addEventListener('click', restartGame)
+    let buttonShowList = document.getElementById('button-mostrar')
+    buttonShowList.addEventListener('click', showList)
 }
 
-// function chooseCharacterPlayer() {
-//     let sectionSelectCharacter = document.getElementById('select-character')
-//     sectionSelectCharacter.style.display = 'none'
-    
-//     let sectionSelectAttack = document.getElementById('select-attack')
-//     sectionSelectAttack.style.display = 'block'
-
-//     let inputVulcano = document.getElementById('vulcano')
-//     let inputNeptuno = document.getElementById('neptuno')
-//     let inputAmón = document.getElementById('amón')
-//     let inputEnki = document.getElementById('enki')
-//     let spanCharacterPlayer = document.getElementById('character-player')
-
-//     if (inputVulcano.checked) {spanCharacterPlayer.innerHTML = 'VULCANO'}
-//     else if (inputNeptuno.checked) {spanCharacterPlayer.innerHTML = 'NEPTUNO'}
-//     else if (inputAmón.checked) {spanCharacterPlayer.innerHTML = 'AMÓN'}
-//     else if (inputEnki.checked) {spanCharacterPlayer.innerHTML = 'ENKI'}
-//     else {alert("CHOOSE YOUR CHARACTER"); restartGame()}
-    
-//     chooseCharacterEnemy()
-// }
-
-// Utils
-function Pagina(id) {
-    
+function changePage() {
+    let buttonLink = document.getElementById('link')
+    buttonLink.addEventListener('click', hidePage(sectionGenerar, 'generar'), showPage(sectionVerificar, 'verificar'))
 }
 
+// Funcion cambiar de secciones
+function showPage(sectionShow, idShow) {
+    sectionShow = document.getElementById(idShow)
+    sectionShow.style.display = 'block'
+}
+function hidePage(sectionHide, idHide) {
+    sectionHide = document.getElementById(idHide)
+    sectionHide.style.display = 'none'
+}
 
-
-
-
-
-
-
-
-// Función para generar el dígito verificador
-function generateVerifier() {
+function generateDigit() {
     let inputNumber = prompt("Ingrese el número para generar el dígito verificador:");
     if (inputNumber === null || inputNumber === "") return;
 
@@ -68,7 +45,6 @@ function generateVerifier() {
     // Mostrar el número con su dígito verificador generado
     document.getElementById("output").innerText = "Número con Dígito Verificador: " + formattedNumber;
 }
-
 // Función para calcular el dígito verificador
 function calculateVerifier(number) {
     let reversedNumber = number.split("").reverse().join("");
@@ -98,3 +74,6 @@ function showList() {
         container.style.visibility = "hidden";
     }
 }
+
+
+window.addEventListener('load', startPage)
