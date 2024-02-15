@@ -10,6 +10,7 @@
     color: rgba(0, 0, 0, .3);
 }
 
+/* Quitar flechas del input number */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
     -webkit-appearance: none; 
@@ -29,8 +30,8 @@ section {
 
 .form-box {
     position: relative;
-    width: 400px;
-    height: 450px;
+    /* width: 400px;
+    height: 450px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,7 +43,7 @@ section {
 
 form {
     display: flex;
-    margin: 35px;
+    margin: 40px;
     flex-direction: column;
     align-items: center;
 }
@@ -50,7 +51,7 @@ form {
 h2 {
     color: rgba(255, 255, 255, .6);
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
 }
 
