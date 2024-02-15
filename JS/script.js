@@ -1,13 +1,48 @@
-// Funcion para cambiar entre paginas
-function CambiarPagina() {
-    let container = document.getElementsByClassName("form-generar")[0];
+// Funcion para Iniciar Pagina
+function startGame() {
+    let sectionSelectAttack = document.getElementById('select-attack')
+    sectionSelectAttack.style.display = 'none'
 
-    if (container.style.visibility == "hidden") {
-        container.style.visibility = "visible";
-    } else {
-        container.style.visibility = "hidden";
-    }
+    let sectionRestartGame = document.getElementById('restart')
+    sectionRestartGame.style.display = 'none'
+
+    let buttonCharacterPlayer = document.getElementById('button-character')
+    buttonCharacterPlayer.addEventListener('click', chooseCharacterPlayer)
+
+    let buttonFire = document.getElementById('button-fire')
+    buttonFire.addEventListener('click', attackFire)
+    let buttonWater = document.getElementById('button-water')
+    buttonWater.addEventListener('click', attackWater)
+    let buttonAir = document.getElementById('button-air')
+    buttonAir.addEventListener('click', attackAir)
+    let buttonEarth = document.getElementById('button-earth')
+    buttonEarth.addEventListener('click', attackEarth)
+
+    let buttonRestart = document.getElementById('button-restart')
+    buttonRestart.addEventListener('click', restartGame)
 }
+
+// function chooseCharacterPlayer() {
+//     let sectionSelectCharacter = document.getElementById('select-character')
+//     sectionSelectCharacter.style.display = 'none'
+    
+//     let sectionSelectAttack = document.getElementById('select-attack')
+//     sectionSelectAttack.style.display = 'block'
+
+//     let inputVulcano = document.getElementById('vulcano')
+//     let inputNeptuno = document.getElementById('neptuno')
+//     let inputAmón = document.getElementById('amón')
+//     let inputEnki = document.getElementById('enki')
+//     let spanCharacterPlayer = document.getElementById('character-player')
+
+//     if (inputVulcano.checked) {spanCharacterPlayer.innerHTML = 'VULCANO'}
+//     else if (inputNeptuno.checked) {spanCharacterPlayer.innerHTML = 'NEPTUNO'}
+//     else if (inputAmón.checked) {spanCharacterPlayer.innerHTML = 'AMÓN'}
+//     else if (inputEnki.checked) {spanCharacterPlayer.innerHTML = 'ENKI'}
+//     else {alert("CHOOSE YOUR CHARACTER"); restartGame()}
+    
+//     chooseCharacterEnemy()
+// }
 
 // Utils
 function Pagina(id) {
@@ -53,7 +88,13 @@ function verifyExistence() {
     alert("Esta función aún no está implementada.");
 }
 
-// Función para mostrar el listado de números y dígitos verificadores (no implementada)
+// Función para mostrar el listado de números y dígitos verificadores
 function showList() {
-    alert("Esta función aún no está implementada.");
+    let container = document.getElementsByClassName("form-generar")[0];
+
+    if (container.style.visibility == "hidden") {
+        container.style.visibility = "visible";
+    } else {
+        container.style.visibility = "hidden";
+    }
 }

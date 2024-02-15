@@ -10,25 +10,34 @@
 </head>
 
 <body>
-    <section>
 
-        <div class="form-box">
-            <div id="generar" class="form-generar">
-                <form action="">
+    <header>
+        <h1>Dígito Verificador</h1>
+    </header>
+
+    <section class="form-box">
+        <div id="generar" class="form-generar">
+            <form action="">
+
+                <header>
                     <h2>Generar Dígito Verificador</h2>
-                    <div class="inputbox">
-                        <i class="ri-sort-number-asc"></i>
-                        <input type="number" required />
-                        <label for="">Ingrese un número</label>
-                    </div>
+                </header>
+
+                <main class="inputbox">
+                    <i class="ri-sort-number-asc"></i>
+                    <input type="number" required />
+                    <label for="">Ingrese un número</label>
                     <button>Generar</button>
-                    <div class="register">
-                        <p> <a href="#" onclick="CambiarPagina()">Verificar</a> Existencia en la Lista</p>
-                        <p> <a href="#" onclick="CambiarPagina()">Mostrar</a> Listado de Números y Dígitos Verificadores</p>
-                    </div>
-                </form>
-            </div>
+                </main>
+
+                <footer class="register">
+                    <p> <a href="#" onclick="CambiarPagina()">Verificar</a> Existencia en la Lista</p>
+                    <p> <a href="#" onclick="CambiarPagina()">Mostrar</a> Listado de Números y Dígitos Verificadores</p>
+                </footer>
+
+            </form>
         </div>
+    </section>
 
 
         <div class="form-box">
@@ -67,7 +76,7 @@
         </div>
         
 
-    </section>
+    
 
     <div class="container">
         <h1>Validación de Números con Dígito Verificador</h1>
