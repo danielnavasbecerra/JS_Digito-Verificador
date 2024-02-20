@@ -8,8 +8,8 @@
 }
 
 *::selection {
-    background-color: rgba(255, 255, 255, .6);
-    color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 /* Quitar flechas del input number */
@@ -39,7 +39,7 @@ body {
     height: 33em;
     padding: 1.5em;
     backdrop-filter: blur(20px);
-    box-shadow: 0 0 20px 5px rgba(0, 0, 0, .8);
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, .8);
     border-radius: 25px;
 }
 
@@ -47,17 +47,14 @@ body {
     text-align: center;
     font-family: "Lora", serif;
     color: rgba(0, 0, 0, 0.6);
-    text-shadow: 0 0 20px rgba(0, 0, 0);
 }
 
 .form-box {
     position: relative;
-    /* width: 400px;
-    height: 450px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 20px rgba(0, 0, 0, .8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, .8);
     border-radius: 20px;
     backdrop-filter: blur(20px);
 }
@@ -73,7 +70,7 @@ form {
     color: rgba(0, 0, 0, 0.6);
     text-align: center;
     margin-bottom: 1.5rem;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .inputbox {
@@ -126,7 +123,6 @@ button {
     outline-color: rgba(0, 0, 0, 0.2);
     outline-offset: 0px;
     text-shadow: none;
-    transition: all 850ms cubic-bezier(0.19, 1, 0.22, 1);
     width: 60%;
     height: 40px;
     border-radius: 40px;
@@ -135,15 +131,16 @@ button {
     font-size: 1em;
     font-weight: 600;
     color: rgba(0, 0, 0, 0.6);
+    transition: .3s;
 }
 
 button:hover {
-    box-shadow: inset 0 0 20px rgba(255, 255, 255, .0), 0 0 20px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .0), 0 0 10px rgba(0, 0, 0, .2);
     outline-color: rgba(255, 255, 255, 0);
-    outline-offset: 4px;
+    outline-offset: 5px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .2);
     transform: scale(1.05);
-    transition: .2s;
+
 }
 
 .register {
@@ -164,47 +161,77 @@ button:hover {
     font-weight: 800;
     font-size: large;
     font-family: "Lora", serif;
+    cursor: pointer;
 }
 
 .register p a:hover {
     text-decoration: underline;
 }
 
-/* .container {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+@media screen and (max-width: 768px) {
+    #background {
+        width: 20em;
+        height: 28em;
+        border-radius: 20px;
+    }
 
-h1 {
-    text-align: center;
+    #header h1 {
+        font-size: 2em;
+    }
+    
+    .form-box {
+        border-radius: 15px;
+    }
+    
+    form {
+        margin: 30px;
+    }
+    
+    .heading h2 {
+        font-size: 1.25em;
+        margin-bottom: 1rem;
+    }
+    
+    .inputbox {
+        margin: 20px 0;
+        width: 250px;
+    }
+    
+    .inputbox label {
+        transform: translateY(-40%);
+        font-size: .8em;
+    }
+    
+    input:focus~label,
+    input:valid~label {
+        top: -1px;
+    }
+    
+    .inputbox input {
+        height: 45px;
+        font-size: .85em;
+        padding: 0 25px 0 5px;
+    }
+    
+    .inputbox i {
+        font-size: 1rem;
+    }
+    
+    button {
+        width: 55%;
+        height: 35px;
+        font-size: .85em;
+    }
+    
+    .register {
+        font-size: .8em;
+    }
+    
+    .register p {
+        margin-top: .8em;
+    }
+    
+    .register p a {
+        font-size: medium;
+    }
 }
-
-.options {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#output {
-    text-align: center;
-} */

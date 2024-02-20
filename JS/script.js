@@ -20,9 +20,9 @@ function startPage() {
     buttonShowList.addEventListener('click', showList)
 }
 
-function changePage() {
-    let buttonLink = document.getElementById('link')
-    buttonLink.addEventListener('click', hidePage(sectionGenerar, 'generar'), showPage(sectionVerificar, 'verificar'))
+function changePage(idLink, idHide, idShow) {
+    let buttonLink = document.getElementById(idLink)
+    buttonLink.addEventListener('click', hidePage(sectionGenerar, idHide), showPage(sectionVerificar, idShow))
 }
 
 // Funcion cambiar de secciones
