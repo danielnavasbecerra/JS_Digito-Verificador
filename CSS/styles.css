@@ -94,12 +94,12 @@ form {
 
 input:focus~label,
 input:valid~label {
-    top: -5px;
+    top: -8px;
 }
 
 .inputbox input {
     width: 85%;
-    height: 50px;
+    height: 2.5em;
     background: transparent;
     border: none;
     outline: none;
@@ -113,7 +113,7 @@ input:valid~label {
     right: 8px;
     color: rgba(0, 0, 0, 0.6);
     font-size: 1.2rem;
-    top: 20px;
+    top: 14px;
 }
 
 button {
@@ -171,7 +171,7 @@ button:hover {
 @media screen and (max-width: 768px) {
     #background {
         width: 20em;
-        height: 28em;
+        height: 27em;
         border-radius: 20px;
     }
 
@@ -198,22 +198,24 @@ button:hover {
     }
     
     .inputbox label {
+        top: 40%;
         transform: translateY(-40%);
-        font-size: .8em;
+        font-size: .75em;
     }
     
     input:focus~label,
     input:valid~label {
-        top: -1px;
+        top: -10px;
     }
     
     .inputbox input {
-        height: 45px;
+        height: 2.5em;
         font-size: .85em;
         padding: 0 25px 0 5px;
     }
     
     .inputbox i {
+        top: 10px;
         font-size: 1rem;
     }
     
