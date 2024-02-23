@@ -23,7 +23,7 @@ body {
     display: flex;
     min-height: 100vh;
     width: 100%;
-    background: url(../IMG/fondo6.jpg)no-repeat;
+    background: url(../IMG/abstract.mp4)no-repeat;
     background-position: center;
     background-size: cover;
     flex-direction: column;

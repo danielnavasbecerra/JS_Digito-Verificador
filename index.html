@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <main id="background">
         <header id="header">
             <h1>Dígito Verificador</h1>
@@ -20,79 +19,92 @@
         <section id="generar">
             <div class="form-box">
                 <form action="">
-    
                     <header class="heading">
                         <h2>Generar Dígito Verificador</h2>
                     </header>
-    
+
                     <main class="inputbox">
                         <i class="ri-sort-number-asc"></i>
                         <input type="number" id="num-dig" required />
                         <label for="num-dig">Ingrese un número</label>
                     </main>
+
+                    <div id="digito_verificador"></div>
+
                     <button id="button-generate">Generar</button>
-    
+
                     <footer class="register">
-                        <p> <a id="link-verificar" onclick="changePage('link-verificar', 'generar', 'verificar')">Verificar</a> Existencia en la Lista</p>
-                        <p> <a id="link-mostrar" onclick="CambiarPagina()">Mostrar</a> Listado de Números y Dígitos Verificadores</p>
+                        <p>
+                            <a id="link-verificar"
+                                onclick="changePage('link-verificar', 'generar', 'verificar')">Verificar</a>
+                            Existencia en la Lista
+                        </p>
+                        <p>
+                            <a id="link-mostrar" onclick="changePage('link-mostrar', 'generar', 'mostrar')">Mostrar</a>
+                            Listado de Números y Dígitos Verificadores
+                        </p>
                     </footer>
-    
                 </form>
             </div>
         </section>
 
-        <section id="verificar" style="display: none;">
+        <section id="verificar" style="display: none">
             <div class="form-box">
                 <form action="">
-    
                     <header class="heading">
                         <h2>Verificar Existencia en la Lista</h2>
                     </header>
-    
+
                     <main class="inputbox">
                         <i class="ri-sort-number-asc"></i>
                         <input type="number" id="num" required />
                         <label for="num">Número con su Digito Verificador</label>
                     </main>
                     <button id="button-verificar">Verificar</button>
-    
+
                     <footer class="register">
-                        <p> <a id="link-generar" onclick="CambiarPagina()">Generar</a> Dígito Verificador</p>
-                        <p> <a id="link-mostrar" onclick="CambiarPagina()">Mostrar</a> Listado de Números y Dígitos Verificadores</p>
+                        <p>
+                            <a id="link-generar"
+                                onclick="changePage('link-generar', 'verificar', 'generar')">Generar</a>
+                            Dígito Verificador
+                        </p>
+                        <p>
+                            <a id="link-mostrar"
+                                onclick="changePage('link-mostrar', 'verificar', 'mostrar')">Mostrar</a>
+                            Listado de Números y Dígitos Verificadores
+                        </p>
                     </footer>
-    
                 </form>
             </div>
         </section>
-    
-        <section id="mostrar" style="display: none;">
+
+        <section id="mostrar" style="display: none">
             <div class="form-box">
                 <form action="">
-    
                     <header class="heading">
                         <h2>Mostrar Listado de Números</h2>
                     </header>
-    
-                    <main class="inputbox">
-                        
-                    </main>
+
+                    <main class="inputbox"></main>
                     <button id="button-mostrar">Mostrar/Ocultar</button>
-    
+
                     <footer class="register">
-                        <p> <a id="link-generar">Generar</a> Dígito Verificador</p>
-                        <p> <a id="link-verificar">Verificar</a> Existencia en la Lista</p>
+                        <p>
+                            <a id="link-generar" onclick="changePage('link-generar', 'mostrar', 'generar')">Generar</a>
+                            Dígito Verificador
+                        </p>
+                        <p>
+                            <a id="link-verificar"
+                                onclick="changePage('link-verificar', 'mostrar', 'verificar')">Verificar</a>
+                            Existencia en la Lista
+                        </p>
                     </footer>
-    
                 </form>
             </div>
         </section>
-
     </main>
 
-
-
-
-    <div class="container" style="display: none;">
+    <div class="container" style="display: none">
         <h1>Validación de Números con Dígito Verificador</h1>
         <div class="options">
             <button onclick="generateVerifier()">Generar Dígito Verificador</button>
