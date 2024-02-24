@@ -23,12 +23,22 @@ body {
     display: flex;
     min-height: 100vh;
     width: 100%;
-    background: url(../IMG/abstract.mp4)no-repeat;
+    /* background: url(../IMG/abstract.mp4)no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: cover; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 105%;
+    min-height: 100%;
+    transform: translateX(calc((100% - 100vw) / 2));
+    z-index: -2;
 }
 
 #background {
@@ -178,61 +188,61 @@ button:hover {
     #header h1 {
         font-size: 2em;
     }
-    
+
     .form-box {
         border-radius: 15px;
     }
-    
+
     form {
         margin: 30px;
     }
-    
+
     .heading h2 {
         font-size: 1.25em;
         margin-bottom: 1rem;
     }
-    
+
     .inputbox {
         margin: 20px 0;
         width: 250px;
     }
-    
+
     .inputbox label {
         top: 40%;
         transform: translateY(-40%);
         font-size: .75em;
     }
-    
+
     input:focus~label,
     input:valid~label {
         top: -10px;
     }
-    
+
     .inputbox input {
         height: 2.5em;
         font-size: .85em;
         padding: 0 25px 0 5px;
     }
-    
+
     .inputbox i {
         top: 10px;
         font-size: 1rem;
     }
-    
+
     button {
         width: 55%;
         height: 35px;
         font-size: .85em;
     }
-    
+
     .register {
         font-size: .8em;
     }
-    
+
     .register p {
         margin-top: .8em;
     }
-    
+
     .register p a {
         font-size: medium;
     }
