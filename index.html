@@ -11,8 +11,6 @@
 </head>
 
 <body>
-    <video src="IMG/abstract.mp4" autoplay="true" muted="true" loop="true" ></video>
-
     <main id="background">
         <header id="header">
             <h1>Dígito Verificador</h1>
@@ -31,7 +29,12 @@
                         <label for="num-dig">Ingrese un número</label>
                     </main>
 
-                    <div id="digito_verificador"></div>
+                    <div class="numero">
+                        <p>
+                            DIG_Generado:
+                            <span id="digito_verificador"></span>
+                        </p>
+                    </div>
 
                     <button id="button-generate">Generar</button>
 
@@ -106,19 +109,6 @@
         </section>
     </main>
 
-    <div class="container" style="display: none">
-        <h1>Validación de Números con Dígito Verificador</h1>
-        <div class="options">
-            <button onclick="generateVerifier()">Generar Dígito Verificador</button>
-            <button onclick="verifyExistence()">
-                Verificar Existencia en la Lista
-            </button>
-            <button onclick="showList()">
-                Mostrar Listado de Números y Dígitos Verificadores
-            </button>
-        </div>
-        <div id="output"></div>
-    </div>
 </body>
 
 </html>

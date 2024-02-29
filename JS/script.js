@@ -1,13 +1,9 @@
-let sectionGenerar
-let sectionVerificar
-let sectionMostrar
-
 // Funcion para Iniciar Pagina
-function startPage() {
-    sectionVerificar = document.getElementById('verificar')
+
+    let sectionVerificar = document.getElementById('verificar')
     sectionVerificar.style.display = 'none'
 
-    sectionMostrar = document.getElementById('mostrar')
+    let sectionMostrar = document.getElementById('mostrar')
     sectionMostrar.style.display = 'none'
 
     let buttonGenerateDigit = document.getElementById('button-generate')
@@ -18,32 +14,32 @@ function startPage() {
 
     let buttonShowList = document.getElementById('button-mostrar')
     buttonShowList.addEventListener('click', showList)
-}
 
-function changePage(idLink, idHide, idShow) {
-    let buttonLink = document.getElementById(idLink)
-    buttonLink.addEventListener('click', hidePage(sectionGenerar, idHide), showPage(sectionVerificar, idShow))
-}
 
 // Funcion cambiar de secciones
-function showPage(sectionShow, idShow) {
-    sectionShow = document.getElementById(idShow)
+function changePage(idLink, idHide, idShow) {
+    let buttonLink = document.getElementById(idLink)
+    buttonLink.addEventListener('click', hidePage(idHide), showPage(idShow))
+}
+function showPage(idShow) {
+    let sectionShow = document.getElementById(idShow)
     sectionShow.style.display = 'block'
 }
-function hidePage(sectionHide, idHide) {
-    sectionHide = document.getElementById(idHide)
+function hidePage(idHide) {
+    let sectionHide = document.getElementById(idHide)
     sectionHide.style.display = 'none'
 }
 
+// Función para generar el dígito verificador
 function generateDigit() {
-    let inputNumber = prompt("Ingrese el número para generar el dígito verificador:");
+    let inputNumber = document.getElementById('num-dig').value;
     if (inputNumber === null || inputNumber === "") return;
 
     let verifier = calculateVerifier(inputNumber);
     let formattedNumber = inputNumber + "-" + verifier;
 
     // Mostrar el número con su dígito verificador generado
-    document.getElementById("output").innerText = "Número con Dígito Verificador: " + formattedNumber;
+    document.getElementById("digito_verificador").innerText = formattedNumber;
 }
 // Función para calcular el dígito verificador
 function calculateVerifier(number) {
@@ -60,20 +56,19 @@ function calculateVerifier(number) {
 }
 
 // Función para verificar la existencia en la lista (no implementada)
-function verifyExistence() {
-    alert("Esta función aún no está implementada.");
-}
+// function verifyExistence() {
+//     alert("Esta función aún no está implementada.");
+// }
 
 // Función para mostrar el listado de números y dígitos verificadores
-function showList() {
-    let container = document.getElementsByClassName("form-generar")[0];
+// function showList() {
+//     let container = document.getElementsByClassName("form-generar")[0];
 
-    if (container.style.visibility == "hidden") {
-        container.style.visibility = "visible";
-    } else {
-        container.style.visibility = "hidden";
-    }
-}
+//     if (container.style.visibility == "hidden") {
+//         container.style.visibility = "visible";
+//     } else {
+//         container.style.visibility = "hidden";
+//     }
+// }
 
 
-window.addEventListener('load', startPage)
